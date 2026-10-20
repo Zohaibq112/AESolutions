@@ -22,7 +22,7 @@ export const CAPABILITIES = [
     key: 'CLOUD + ERP',
     title: 'Cloud & ERP Solutions',
     desc: 'Modernize infrastructure and business platforms with scalable cloud and ERP environments.',
-    tags: ['Cloud Migration', 'ERP Implementation', 'Cloud Rollout', 'AWS / Azure / GCP / Oracle'],
+    tags: ['Cloud Migration', 'ERP Implementation', 'Cloud Rollout', 'AWS · Azure · GCP · Oracle · SAP'],
     viz: 'cloud', photo: 'tech-rack',
     photoAlt: 'Engineer testing equipment in a data-centre rack',
   },
@@ -98,6 +98,7 @@ export const CLOUDS = [
   { k: 'azure', name: 'Microsoft Azure', note: 'Identity · workloads · ERP' },
   { k: 'gcp', name: 'Google Cloud', note: 'Data · analytics · scale' },
   { k: 'oracle', name: 'Oracle', note: 'Oracle Cloud · ERP · databases' },
+  { k: 'sap', name: 'SAP', note: 'S/4HANA · ERP · integration' },
 ]
 
 export const INDUSTRIES = [
@@ -139,7 +140,7 @@ export const SERVICE_DETAIL = {
   },
   cloud: {
     slug: 'cloud', photo: 'cloud', photo2: 'tech-rack',
-    lead: 'Modernise infrastructure and core business platforms on AWS, Microsoft Azure, Google Cloud or Oracle Cloud without disrupting daily operations.',
+    lead: 'Modernise infrastructure and core business platforms on AWS, Microsoft Azure, Google Cloud or Oracle Cloud, with ERP on SAP or Oracle, without disrupting daily operations.',
     body: 'We plan migrations workload by workload, build secure landing zones, and implement or upgrade ERP platforms so finance, supply chain and operations run on a scalable, supported foundation.',
     deliver: [
       ['Cloud readiness assessment', 'Workload discovery, dependency mapping and a migration business case.'],

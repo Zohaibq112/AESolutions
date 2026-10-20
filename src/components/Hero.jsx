@@ -168,7 +168,7 @@ export default function Hero({ ready }) {
               <MagneticButton href="#services" variant="btn--ghost">Explore services</MagneticButton>
             </motion.div>
             <motion.ul className="assure" variants={fade} custom={1}>
-              {['Security and compliance built into every design', 'Delivery across AWS, Azure, Google Cloud and Oracle', 'One accountable team from strategy to support'].map((t) => (
+              {['Security and compliance built into every design', 'Delivery across AWS, Azure, Google Cloud, Oracle and SAP', 'One accountable team from strategy to support'].map((t) => (
                 <li key={t}><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="var(--amber-soft)" /><path d="M5.5 10.2l3 3 6-6.4" fill="none" stroke="var(--amber-ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>{t}</li>
               ))}
             </motion.ul>

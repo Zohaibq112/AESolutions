@@ -123,7 +123,7 @@ export function CloudViz() {
   const modules = ['Finance', 'Supply', 'HR', 'Sales']
   return (
     <div className="viz" style={{ display: 'grid', gap: 18 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 6 }}>
         {tiles.map(([g, n, logo], i) => (
           <motion.div key={g}
             style={{ border: '1px solid var(--ink)', background: 'var(--paper)', padding: '14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}
@@ -137,7 +137,7 @@ export function CloudViz() {
         ))}
       </div>
       <svg viewBox="0 0 300 40" aria-hidden="true" style={{ height: 40 }}>
-        {[37, 112, 188, 263].map((x, i) => (
+        {[30, 90, 150, 210, 270].map((x, i) => (
           <g key={x}>
             <path d={`M${x} 0 V40`} stroke="var(--ink-3)" strokeDasharray="2 3" />
             {!reduce && (

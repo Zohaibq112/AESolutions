@@ -941,3 +941,16 @@ body { background: var(--paper); font-size: 16.5px; }
 .viz-logo.pl--gcp img { height: 26px; }
 .viz-logo.pl--oracle img { height: 12px; }
 .glyph--logo img { height: 40px; max-width: 80%; object-fit: contain; object-position: left center; }
+/* five platforms */
+.platforms__row { grid-template-columns: repeat(5, 1fr); }
+.platforms__row .pl--sap img { height: 34px; width: auto; }
+.plat-chip--sap img { height: 14px; }
+.viz-logo.pl--sap img { height: 16px; }
+.viz-logo.pl--oracle img { height: 9px; }
+.viz-logo.pl--aws img { height: 24px; }
+.viz-logo.pl--azure img { height: 15px; }
+.viz-logo.pl--gcp img { height: 22px; }
+.clouds { grid-template-columns: repeat(2, 1fr); }
+.clouds .cloud:nth-child(5) { grid-column: 1 / -1; border-left: 0; }
+.hero__coords { gap: 6px; }
+@media (max-width: 760px) { .platforms__row { grid-template-columns: repeat(3, 1fr); } }

@@ -209,7 +209,7 @@ export function Ecosystem() {
           </div>
           <div className="eco__side">
             <Reveal as="p" className="lede">
-              Seven domains routed through one core. We work across AWS, Microsoft Azure, Google Cloud and Oracle, so the platform follows your business rather than the other way round.
+              Seven domains routed through one core. We work across AWS, Microsoft Azure, Google Cloud, Oracle and SAP, so the platform follows your business rather than the other way round.
             </Reveal>
             <div className="clouds">
               {CLOUDS.map((c, i) => (
@@ -279,7 +279,7 @@ export function Industries() {
 
 const FAQS = [
   ['What does AE Solutions do?', 'We help organisations plan, build and run their technology as one connected system. Our five practices cover IT advisory, data analytics and integration, cloud and ERP, managed IT, and compliance and security.'],
-  ['Which cloud platforms do you work with?', 'We design and deliver on AWS, Microsoft Azure, Google Cloud and Oracle (including Oracle Cloud Infrastructure and Oracle ERP), including hybrid set-ups that keep some workloads on your own infrastructure. We recommend the platform that fits your estate, skills and budget.'],
+  ['Which cloud platforms do you work with?', 'We design and deliver on AWS, Microsoft Azure, Google Cloud and Oracle (including Oracle Cloud Infrastructure and Oracle ERP), and implement and integrate SAP and Oracle ERP, including hybrid set-ups that keep some workloads on your own infrastructure. We recommend the platform that fits your estate, skills and budget.'],
   ['How does an engagement usually start?', 'With an assessment. We review your current systems, data flows, costs and risks, then agree a prioritised roadmap with clear milestones before any build work begins.'],
   ['Can you work with our existing systems and vendors?', 'Yes. Most clients already run a mix of ERP, line-of-business applications and cloud services. We integrate with what you have and work alongside your internal team and current suppliers.'],
   ['Do you provide support after go-live?', 'Yes. Our managed IT service covers infrastructure monitoring, patching, helpdesk and routine maintenance, so the systems we deliver stay reliable after launch.'],
@@ -423,7 +423,7 @@ export function Contact() {
 const PRINCIPLES = [
   { t: 'Security by default', d: 'Identity, access control and audit trails are designed in from the first workshop, not added at the end.', icon: 'M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6l7-3z M9 12l2 2 4-4.5' },
   { t: 'Governance you can show', d: 'Every recommendation ties back to a business priority, a cost and an owner, so decisions stand up to review.', icon: 'M4 20h16 M6 20V10 M10 20V6 M14 20v-8 M18 20V4' },
-  { t: 'Platform-neutral advice', d: 'We work across AWS, Microsoft Azure, Google Cloud and Oracle and recommend what fits your estate and budget.', icon: 'M7 17a4 4 0 010-8 5 5 0 019.6-1.5A3.5 3.5 0 1117.5 17H7z' },
+  { t: 'Platform-neutral advice', d: 'We work across AWS, Microsoft Azure, Google Cloud, Oracle and SAP and recommend what fits your estate and budget.', icon: 'M7 17a4 4 0 010-8 5 5 0 019.6-1.5A3.5 3.5 0 1117.5 17H7z' },
   { t: 'Documented handover', d: 'Architecture diagrams, runbooks and dashboards are yours to keep, so your team is never locked in.', icon: 'M7 3h7l5 5v13H7z M14 3v5h5 M10 13h6 M10 17h6' },
 ]
 export function Trust() {
