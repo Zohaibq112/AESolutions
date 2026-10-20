@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion, useReducedMotion, animate, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { EASE } from './primitives'
+import { PLATFORMS } from '../logos'
 
 /* 01 — ASSESS → DESIGN → EVOLVE loop */
 export function AdvisoryViz() {
@@ -118,25 +119,25 @@ export function DataViz() {
 /* 03 — cloud providers into the enterprise core */
 export function CloudViz() {
   const reduce = useReducedMotion()
-  const tiles = [['A', 'AWS'], ['Az', 'Azure'], ['G', 'GCP']]
+  const tiles = PLATFORMS.map((p) => [p.key, p.short, p.logo])
   const modules = ['Finance', 'Supply', 'HR', 'Sales']
   return (
     <div className="viz" style={{ display: 'grid', gap: 18 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10 }}>
-        {tiles.map(([g, n], i) => (
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 8 }}>
+        {tiles.map(([g, n, logo], i) => (
           <motion.div key={g}
             style={{ border: '1px solid var(--ink)', background: 'var(--paper)', padding: '14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}
             initial={{ y: -24, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }}
             transition={{ duration: 0.7, delay: i * 0.12, ease: EASE }}
             whileHover={{ y: -4, backgroundColor: 'var(--paper-3)' }}
           >
-            <span style={{ fontFamily: 'var(--f-display)', fontWeight: 800, fontVariationSettings: "'wdth' 125", fontSize: 36, letterSpacing: '-0.05em', textTransform: 'none', lineHeight: 0.8 }}>{g}</span>
+            <span className={`viz-logo pl--${g}`}><img src={logo} alt="" /></span>
             <span style={{ fontSize: 10 }}>{n}</span>
           </motion.div>
         ))}
       </div>
       <svg viewBox="0 0 300 40" aria-hidden="true" style={{ height: 40 }}>
-        {[50, 150, 250].map((x, i) => (
+        {[37, 112, 188, 263].map((x, i) => (
           <g key={x}>
             <path d={`M${x} 0 V40`} stroke="var(--ink-3)" strokeDasharray="2 3" />
             {!reduce && (

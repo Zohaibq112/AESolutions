@@ -22,7 +22,7 @@ export const CAPABILITIES = [
     key: 'CLOUD + ERP',
     title: 'Cloud & ERP Solutions',
     desc: 'Modernize infrastructure and business platforms with scalable cloud and ERP environments.',
-    tags: ['Cloud Migration', 'ERP Implementation', 'Cloud Rollout', 'AWS / Azure / GCP'],
+    tags: ['Cloud Migration', 'ERP Implementation', 'Cloud Rollout', 'AWS / Azure / GCP / Oracle'],
     viz: 'cloud', photo: 'tech-rack',
     photoAlt: 'Engineer testing equipment in a data-centre rack',
   },
@@ -94,9 +94,10 @@ export const LAYERS = [
 export const DOMAINS = ['Cloud', 'Data', 'ERP', 'Infrastructure', 'Security', 'Applications', 'Operations']
 
 export const CLOUDS = [
-  { g: 'A', name: 'AWS', note: 'Compute · storage · migration' },
-  { g: 'Az', name: 'Microsoft Azure', note: 'Identity · workloads · ERP' },
-  { g: 'G', name: 'Google Cloud', note: 'Data · analytics · scale' },
+  { k: 'aws', name: 'AWS', note: 'Compute · storage · migration' },
+  { k: 'azure', name: 'Microsoft Azure', note: 'Identity · workloads · ERP' },
+  { k: 'gcp', name: 'Google Cloud', note: 'Data · analytics · scale' },
+  { k: 'oracle', name: 'Oracle', note: 'Oracle Cloud · ERP · databases' },
 ]
 
 export const INDUSTRIES = [
@@ -138,7 +139,7 @@ export const SERVICE_DETAIL = {
   },
   cloud: {
     slug: 'cloud', photo: 'cloud', photo2: 'tech-rack',
-    lead: 'Modernise infrastructure and core business platforms on AWS, Microsoft Azure or Google Cloud without disrupting daily operations.',
+    lead: 'Modernise infrastructure and core business platforms on AWS, Microsoft Azure, Google Cloud or Oracle Cloud without disrupting daily operations.',
     body: 'We plan migrations workload by workload, build secure landing zones, and implement or upgrade ERP platforms so finance, supply chain and operations run on a scalable, supported foundation.',
     deliver: [
       ['Cloud readiness assessment', 'Workload discovery, dependency mapping and a migration business case.'],

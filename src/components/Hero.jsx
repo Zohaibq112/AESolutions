@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion, useScroll } from 'framer-motion'
 import { MaskLines, MagneticButton, Photo, EASE } from './primitives'
 import { img } from '../images'
+import { PLATFORMS } from '../logos'
 
 const NODES = [
   { id: 'adv', label: 'Advisory', idx: 'N-01', x: 90, y: 50, d: 'M90 68 V184 H250' },
@@ -134,9 +135,9 @@ export default function Hero({ ready }) {
           <motion.span className="eyebrow" variants={fade} custom={0.1}><i className="tick" />IT consulting &amp; digital transformation</motion.span>
           <motion.div className="hero__coords" variants={fade} custom={0.2}>
             <span className="hero__coords-lbl">Delivering on</span>
-            <span className="chip-pl">AWS</span>
-            <span className="chip-pl">Microsoft Azure</span>
-            <span className="chip-pl">Google Cloud</span>
+            {PLATFORMS.map((p) => (
+              <span key={p.key} className={`plat-chip plat-chip--${p.key}`} title={p.name}><img src={p.logo} alt={p.name} /></span>
+            ))}
           </motion.div>
         </motion.div>
 
@@ -167,7 +168,7 @@ export default function Hero({ ready }) {
               <MagneticButton href="#services" variant="btn--ghost">Explore services</MagneticButton>
             </motion.div>
             <motion.ul className="assure" variants={fade} custom={1}>
-              {['Security and compliance built into every design', 'Multi-cloud delivery across AWS, Azure and Google Cloud', 'One accountable team from strategy to support'].map((t) => (
+              {['Security and compliance built into every design', 'Delivery across AWS, Azure, Google Cloud and Oracle', 'One accountable team from strategy to support'].map((t) => (
                 <li key={t}><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="var(--amber-soft)" /><path d="M5.5 10.2l3 3 6-6.4" fill="none" stroke="var(--amber-ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>{t}</li>
               ))}
             </motion.ul>
@@ -191,6 +192,15 @@ export default function Hero({ ready }) {
               <span>{s}</span>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div className="platforms" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.8, ease: EASE }}>
+          <p className="platforms__lbl mono">Platforms we design, migrate and run on</p>
+          <ul className="platforms__row">
+            {PLATFORMS.map((p) => (
+              <li key={p.key} className={`pl--${p.key}`}><img src={p.logo} alt={p.name} loading="lazy" /></li>
+            ))}
+          </ul>
         </motion.div>
       </div>
     </section>

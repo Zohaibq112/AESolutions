@@ -12,7 +12,7 @@ const LINKS = [
 const SERVICE_MENU = [
   ['IT Advisory', 'Architecture, governance, roadmaps', 'advisory'],
   ['Data Analytics & Integration', 'Pipelines, integration, dashboards', 'data'],
-  ['Cloud & ERP', 'Migration, ERP, AWS · Azure · GCP', 'cloud'],
+  ['Cloud & ERP', 'Migration, ERP, AWS · Azure · GCP · Oracle', 'cloud'],
   ['Managed IT', 'Monitoring, patching, helpdesk', 'managed'],
   ['Compliance & Security', 'Risk, hardening, audit readiness', 'security'],
 ]
